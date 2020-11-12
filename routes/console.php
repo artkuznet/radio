@@ -20,4 +20,5 @@ Artisan::command('inspire', function () {
 
 Artisan::command('test_event', function () {
     event(new \App\Events\TestEvent('test message!'));
+	echo 'ok' . PHP_EOL;
 });

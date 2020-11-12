@@ -20,7 +20,7 @@
         },
         mounted() {
             console.log('it\'s fine');
-            this.$echo.private('test_channel').listen('TestEvent', (payload) => {
+            this.$echo.private('test').listen('.App.Events.TestEvent', (payload) => {
                 console.log(payload);
             });
         }

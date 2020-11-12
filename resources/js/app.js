@@ -6,7 +6,12 @@ import tracks from './components/Tracks';
 
 Vue.use(VueEcho, {
     broadcaster: 'socket.io',
-    host: window.location.hostname + ':6001'
+    host: window.location.hostname + ':6001',
+	auth: {
+        headers: {
+            Authorization: 'Bearer ' + document.head.querySelector('meta[name="csrf-token"]').content
+        },
+    },
 });
 
 if ($('#tracks').length) {
