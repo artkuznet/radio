@@ -1,39 +1,36 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Events;
 
-use Illuminate\Broadcasting\Channel;
-use Illuminate\Broadcasting\InteractsWithSockets;
-//use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-use Illuminate\Foundation\Events\Dispatchable;
-use Illuminate\Queue\SerializesModels;
 
 class TestEvent implements ShouldBroadcast
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels;
+    /**
+     * @var string
+     */
+    private $text;
 
-    public $message;
-
-    public function __construct(string $message)
+    public function __construct(string $text)
     {
-        $this->message = $message;
+        $this->text = $text;
     }
 
     public function broadcastAs()
     {
-        return 'user.registered';
+        return 'my-event';
     }
 
     public function broadcastOn()
     {
-        echo 'brodcast' . PHP_EOL;
-
-        return new Channel('test');
+        return new PrivateChannel('test');
     }
 
     public function broadcastWith()
     {
-        return ['id' => 777];
+        return ['text' => $this->text];
     }
 }

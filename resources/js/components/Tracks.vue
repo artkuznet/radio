@@ -20,8 +20,8 @@
         },
         mounted() {
             console.log('it\'s fine');
-            this.$echo.private('test').listen('.App.Events.TestEvent', (payload) => {
-                console.log(payload);
+            this.$echo.private('test').listen('.my-event', (payload) => {
+                this.tracks.push(`${payload.text}`);
             });
         }
     }

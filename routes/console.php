@@ -18,7 +18,6 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-Artisan::command('test_event', function () {
-    event(new \App\Events\TestEvent('test message!'));
-	echo 'ok' . PHP_EOL;
+Artisan::command('test_event {text}', function ($text) {
+    event(new \App\Events\TestEvent($text));
 });
