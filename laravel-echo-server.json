@@ -1,5 +1,5 @@
 {
-    "authHost": "localhost",
+    "authHost": "http://192.168.0.100",
     "authEndpoint": "/broadcasting/auth",
     "database": "redis",
     "databaseConfig": {
