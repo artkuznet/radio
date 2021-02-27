@@ -1,5 +1,5 @@
 {
-    "authHost": "http://192.168.0.100",
+    "authHost": "http://radio.local",
     "authEndpoint": "/broadcasting/auth",
     "database": "redis",
     "databaseConfig": {

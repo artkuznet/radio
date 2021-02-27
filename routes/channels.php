@@ -20,3 +20,7 @@ Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
 Broadcast::channel('test', function () {
     return true; // todo logic
 });
+
+Broadcast::channel('public-channel', function () {
+    return true; // todo logic
+});

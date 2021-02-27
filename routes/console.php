@@ -21,3 +21,7 @@ Artisan::command('inspire', function () {
 Artisan::command('test_event {text}', function ($text) {
     event(new \App\Events\TestEvent($text));
 });
+
+Artisan::command('public_event {text}', function ($text) {
+    event(new \App\Events\PublicEvent($text));
+});
