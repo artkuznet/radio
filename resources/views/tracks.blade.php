@@ -35,6 +35,26 @@
         <tracks></tracks>
     </div>
 </main>
+<footer class="footer">
+    <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+    <script type="text/javascript">
+      MRP.insert({
+        'url': 'http://radio.local:8000/stream.ogg',
+        'lang': 'ru',
+        'codec': 'ogg',
+        'volume': 70,
+        'autoplay': true,
+        'forceHTML5': true,
+        'jsevents': true,
+        'buffering': 0,
+        'title': 'radio',
+        'wmode': 'transparent',
+        'skin': 'substream',
+        'width': 180,
+        'height': 30
+      });
+    </script>
+</footer>
 <script src="/js/app.js"></script>
 </body>
 </html>

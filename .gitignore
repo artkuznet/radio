@@ -16,3 +16,5 @@ yarn-error.log
 /public/mix-manifest.json
 /yarn.lock
 /laravel-echo-server.lock
+/ices/playlist.txt
+/tracks/

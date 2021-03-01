@@ -12,4 +12,10 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-  .styles(['resources/styles/bootstrap.css', 'resources/styles/navbar-top-fixed.css'], 'public/css/bootstrap.css');
+  .styles([
+    './node_modules/bootstrap/dist/css/bootstrap.css',
+    'resources/styles/bootstrap.css',
+    'resources/styles/sticky-footer-navbar.css',
+    'resources/styles/navbar-top-fixed.css',
+    'resources/styles/muses.css',
+  ], 'public/css/bootstrap.css');
