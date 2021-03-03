@@ -15,8 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
-Route::get('/tracks', function () {
-    return view('tracks');
-});
+Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login']);
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login')->middleware('guest');
+
+Route::get('/logout', [\App\Http\Controllers\AuthController::class, 'logout']);
+
+Route::get('/tracks', [\App\Http\Controllers\TrackController::class, 'index'])->middleware('auth');
